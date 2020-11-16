@@ -6,8 +6,9 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-    <h1> Hello World </h1>
+   <div className="WeatherApp">
     <Weather />
+    </div>
     <footer>
       Project coded by 
       <a href="https://www.linkedin.com/in/yasrah-kapadia-12841196/" target="_blank" rel="noopener noreferrer"> Yasrah Kapadia </a>and is open-sourced on
@@ -15,6 +16,7 @@ function App() {
     </footer>
     </div>
     </div>
+   
   );
 }
 
