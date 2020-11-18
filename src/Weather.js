@@ -1,4 +1,5 @@
 import React from 'react';
+import './Weather.css';
 
 export default function Weather() {
     return (
@@ -27,22 +28,22 @@ export default function Weather() {
             <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy"
             className="float-left" />
           </div>
-          </div>
             <div className="float-left">
             <span className="TempToday"> 55 </span>
-            <span className="unit">°C|°F
+            <span className="unit"> °C|°F
             </span>
             </div>
-        
+            </div>
+            </div>
           <div className="col-6">
-            <p>
-              {" "}
-              Humidity: 9% <br /> Wind: 9km/hr <br /> Feels like: 45{" "}
-            </p>
+            <ul>
+             <li> Humidity: 9% </li> <li> Wind: 9km/hr </li> <li> Feels like: 45</li> 
+              </ul>
           </div>
         </div>
         <h3 className="description">Clear Skies</h3>
       </div>
-   </div>
-    )
+    );
 }
+   
+    

@@ -1,0 +1,33 @@
+.Weather h1{
+  font-size: 64px;
+  font-weight: 100;
+  margin: 20px 0 0 0;
+  
+}
+.Weather img {
+  font-size: 64px;
+}
+  .searchengine{
+    margin: 0 auto;
+    padding: 0;
+  }
+  .currentWeather img{
+    padding: 10px;
+    line-height: 64px;
+   display: inline-block;
+  
+  }
+  .Weather .TempToday{
+    font-size: 64px;
+    font-weight: 400;
+  
+    top: -34px;
+    margin-left: 5px;
+    line-height: 64px;
+  }
+  .Weather .unit{
+    font-size: 16px;
+    position: relative;
+    line-height: 1;
+    top: -34px;
+  }
