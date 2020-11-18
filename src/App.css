@@ -7,12 +7,14 @@ body {
       "Lucida Sans", Arial, sans-serif;
     text-align: center;
     position: relative;
+    max-width: 600px;
+    margin: 0 auto;
   }
   .container {
     padding: 20px;
     text-align: center;
-    margin: 0 auto;
-    max-width: 500px;
+
+    
   }
   div.WeatherApp {
     background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
@@ -26,3 +28,29 @@ body {
   
     display: block;
   }
+.footer{
+  font-size: 10px;
+  margin: 10px 0;
+}
+.TempToday{
+  font-size: 64px;
+  line-height: 64px;
+}
+.searchengine{
+  margin: 0 auto;
+  padding: 0;
+}
+.currentWeather img{
+  padding: 10px;
+  eight: 64px;
+ display: inline-block;
+
+}
+.TempToday .unit{
+  font-size: 64px;
+  font-weight: 400;
+  position: relative;
+  top: -34px;
+
+  line-height: 64px;
+}
