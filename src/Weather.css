@@ -4,9 +4,11 @@
   margin: 20px 0 0 0;
   
 }
-.Weather img {
-  font-size: 64px;
+.Weather h2{
+  font-size: 32px;
+  
 }
+
   .searchengine{
     margin: 0 auto;
     padding: 0;
@@ -15,14 +17,13 @@
     padding: 10px;
     line-height: 64px;
    display: inline-block;
+
   
   }
   .Weather .TempToday{
     font-size: 64px;
     font-weight: 400;
-  
     top: -34px;
-    margin-left: 5px;
     line-height: 64px;
   }
   .Weather .unit{
@@ -30,4 +31,14 @@
     position: relative;
     line-height: 1;
     top: -34px;
+    margin-left: -10%;
+  }
+  .Weather ul{
+    margin: 0;
+    padding: 0;
+  }
+  .Weather li {
+    font-size: 16px;
+    font-weight: 100;
+    list-style: none;
   }

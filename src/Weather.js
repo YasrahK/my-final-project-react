@@ -21,6 +21,8 @@ export default function Weather() {
         </div>
      </form>
      <h1> Chicago </h1>
+     <h2 className="description">Clear Skies</h2>
+    
      <div className="CurrentWeather">
         <div className="row">
           <div className="col-6">
@@ -34,14 +36,14 @@ export default function Weather() {
             </span>
             </div>
             </div>
-            </div>
           <div className="col-6">
             <ul>
              <li> Humidity: 9% </li> <li> Wind: 9km/hr </li> <li> Feels like: 45</li> 
               </ul>
           </div>
         </div>
-        <h3 className="description">Clear Skies</h3>
+        </div>
+       
       </div>
     );
 }
