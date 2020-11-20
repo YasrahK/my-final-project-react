@@ -4,15 +4,25 @@ import './Weather.css';
 
 
 export default function Weather() {
-  const[weatherData, setWeatherData] = useState(false);
-  const [temperature, setTemperature]= useState(null);
+  const[WeatherData, setWeatherData] = useState({ready: false});
+
   function handleResponse(response){
     console.log(response.data);
-    setTemperature(response.data.main.temp);
-    setWeatherData(true);
+    setWeatherData({
+      ready: true,
+      temperature: response.data.main.temp,
+      wind: response.data.wind.speed,
+      city: response.data.name,
+      humidity: response.data.main.humidity,
+      description: response.data.weather[0].main,
+      feels_like: 14,
+      icon:"https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
+    });
+  
+
   }
 
-  if(weatherData){
+  if(WeatherData.ready){
     return (
       <div className="Weather">
         <form className="search-engine">
@@ -31,25 +41,25 @@ export default function Weather() {
            <input type="button" value="📍" className="btn btn-primary w-100" /></div>
            </div>
         </form>
-        <h1> Chicago </h1>
-        <h2 className="description text-capitalize">clear skies</h2>
+        <h1> {WeatherData.city} </h1>
+        <h2 className="description text-capitalize">{WeatherData.description}</h2>
        
         <div className="CurrentWeather">
            <div className="row">
              <div className="col-6">
                <div className="clear-fix">
-               <img src="https://ssl.gstatic.com/onebox/weather/64/cloudy.png" alt="Cloudy"
+               <img src={WeatherData.icon} alt={WeatherData.description}
                className="float-left" />
              </div>
                <div className="float-left">
-               <span className="TempToday"> {Math.round(temperature)} </span>
+               <span className="TempToday"> {Math.round(WeatherData.temperature)} </span>
                <span className="unit"> °C|°F
                </span>
                </div>
                </div>
              <div className="col-6">
                <ul>
-                <li> Humidity: 9% </li> <li> Wind: 9km/hr </li> <li> Feels like: 45</li> 
+                <li> Humidity: {WeatherData.humidity}% </li> <li> Wind: {Math.round(WeatherData.wind)} km/hr </li> <li> Feels like: {WeatherData.feels_like}</li> 
                  </ul>
              </div>
            </div>
