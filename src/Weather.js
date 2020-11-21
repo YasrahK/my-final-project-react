@@ -3,18 +3,18 @@ import axios from "axios";
 import './Weather.css';
 
 
-export default function Weather() {
-  const[WeatherData, setWeatherData] = useState({ready: false});
+export default function Weather(props) {
+  const[WeatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response){
-    console.log(response.data);
+  
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
       city: response.data.name,
       humidity: response.data.main.humidity,
-      description: response.data.weather[0].main,
+      description: response.data.weather[0].description,
       feels_like: 14,
       icon:"https://ssl.gstatic.com/onebox/weather/64/cloudy.png"
     });
@@ -69,8 +69,7 @@ export default function Weather() {
        );
   } else {
     const apiKey="5fc324aaf951a7a1b818994b70c47e36";
-    let city="London";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
     
 
