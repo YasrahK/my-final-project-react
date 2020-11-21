@@ -8,7 +8,9 @@
   font-size: 32px;
   
 }
-
+.Weather h3{
+  font-size: 16px;
+}
   .searchengine{
     margin: 0 auto;
     padding: 0;
