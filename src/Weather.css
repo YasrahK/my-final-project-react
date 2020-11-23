@@ -15,7 +15,7 @@
     margin: 0 auto;
     padding: 0;
   }
-  .currentWeather img{
+  .currentWeather canvas{
     padding: 10px;
     line-height: 64px;
    display: inline-block;
