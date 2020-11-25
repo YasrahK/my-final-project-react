@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDate from './FormattedDate';
 import WeatherIcon from "./WeatherIcon";
+import CurrentTemperature from './CurrentTemperature';
 
 export default function Weathernfo(props){
     return(
@@ -18,11 +19,8 @@ export default function Weathernfo(props){
             
                </div>
              </div>
-               <div className="float-left">
-               <span className="TempToday"> {Math.round(props.data.temperature)} </span>
-               <span className="unit"> °C|°F
-               </span>
-               </div>
+             <CurrentTemperature celcius={props.data.temperature} />
+           
                </div>
              <div className="col-6">
                <ul>
