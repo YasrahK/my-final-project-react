@@ -17,7 +17,17 @@ body {
     
   }
   div.WeatherApp {
-    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    background-image: linear-gradient(
+      to bottom,
+      #92d8f7 0%,
+      #bbabd8 15%,
+      #9a8ca5 20%,
+      #a87aa5 30%,
+      #b88b9c 40%,
+      #f0a69b 75%,
+      #f5ccad 87%,
+      #b3996d 100%
+    );
     border-radius: 3px;
     border: #ebecf1 1px;
     border-style: solid;
