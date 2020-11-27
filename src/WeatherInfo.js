@@ -3,7 +3,7 @@ import FormattedDate from './FormattedDate';
 import WeatherIcon from "./WeatherIcon";
 import CurrentTemperature from './CurrentTemperature';
 
-export default function Weathernfo(props){
+export default function WeatherInfo(props){
     return(
         <div className="WeatherInfo">
                 <h1> {props.data.city} </h1>
