@@ -41,7 +41,7 @@ export default function Weather(props) {
   }
 function searchLocation(position){
   const apiKey="5fc324aaf951a7a1b818994b70c47e36";
-  let apiUrl= `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid={apiKey}&units=metric`; 
+   let apiUrl= `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(handleResponse);
 }
 
@@ -65,7 +65,7 @@ function searchLocation(position){
           />
           </div>
           <div className="col-3">
-           <input type="button" value="search" className="btn btn-primary w-100" /></div>
+           <input type="submit" value="search" className="btn btn-primary w-100" /></div>
            <div className="col-3">
            <input type="button" value="📍" className="btn btn-primary w-100" onClick={handleCurrentLocation}/></div>
            </div>
