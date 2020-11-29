@@ -24,7 +24,7 @@ export default function Weathernfo(props){
                </div>
              <div className="col-6">
                <ul>
-                <li> Humidity: {props.data.humidity}% </li> <li> Wind: {Math.round(props.data.wind)} km/hr </li> <li> Feels like: {props.data.feels_like}</li> 
+                <li> Humidity: {props.data.humidity}% </li> <li> Wind: {Math.round(props.data.wind)} km/hr </li> <li> Feels like: {Math.round(props.data.feels_like)}°</li> 
                  </ul>
              </div>
            </div>
