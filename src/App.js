@@ -1,13 +1,16 @@
 import React from "react";
 import './App.css';
 import Weather from './Weather';
+import "./Fontawesome";
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-   <div className="WeatherApp">
-    <Weather defaultCity="New York" />
+   <div className="WeatherApp row">
+     <div className="col">
+     <Weather defaultCity="New York" />
+     </div>
     </div>
     <footer>
       Project coded by 

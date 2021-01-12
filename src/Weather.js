@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import axios from "axios";
 import WeatherInfo from './WeatherInfo';
 import WeatherForecast from './WeatherForecast';
-
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 import './Weather.css';
 
@@ -67,7 +67,8 @@ function searchLocation(position){
           <div className="col-3">
            <input type="submit" value="search" className="btn btn-primary w-100" /></div>
            <div className="col-3">
-           <input type="button" value="📍" className="btn btn-primary w-100" onClick={handleCurrentLocation}/></div>
+           <button className="btn btn-info w-100" title="Geolocation" onClick={handleCurrentLocation}><FontAwesomeIcon icon="compass" spin /></button>
+           </div>
            </div>
         </form>
     <WeatherInfo data={WeatherData} />

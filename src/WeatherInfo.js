@@ -2,6 +2,7 @@ import React from "react";
 import FormattedDate from './FormattedDate';
 import WeatherIcon from "./WeatherIcon";
 import CurrentTemperature from './CurrentTemperature';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Weathernfo(props){
     return(
@@ -24,7 +25,7 @@ export default function Weathernfo(props){
                </div>
              <div className="col-6">
                <ul>
-                <li> Humidity: {props.data.humidity}% </li> <li> Wind: {Math.round(props.data.wind)} km/hr </li> <li> Feels like: {Math.round(props.data.feels_like)}°</li> 
+                <li><FontAwesomeIcon icon="tint"/> Humidity: {props.data.humidity}%  </li> <li> <FontAwesomeIcon icon="wind"/> Wind:{Math.round(props.data.wind)} km/hr </li> <li> <FontAwesomeIcon icon="thermometer-full"/> Feels like: {Math.round(props.data.feels_like)}°</li> 
                  </ul>
              </div>
            </div>
